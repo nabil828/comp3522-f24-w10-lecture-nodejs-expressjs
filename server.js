@@ -5,10 +5,10 @@ const path = require('path');
 
 
 app.get("/", (req, res) => {
-  res.json({
-    "msg": " all good ✅",
-    "status": "success"
-  })
+  res.write("<h1>")
+  res.write("All good")
+  res.write("</h1>")
+  res.end()
 })
 
 app.get("/aboutus", (req, res) => {
@@ -19,9 +19,14 @@ app.get("/page1", (req, res) => {
   res.send("<h1> Welcome to page1!</h1>")
 })
 
+app.use(express.json()) // builtin middleware
+app.post("/signup", (req, res) => {
+  console.log(req.body);
+  res.send(`Hi ${req.body.username}!`)
+})
+
 // app.put()
 // app.delete()
-// app.post()
 
 app.listen(3000, () => {
   console.log("Successfully listening to port 3000");
