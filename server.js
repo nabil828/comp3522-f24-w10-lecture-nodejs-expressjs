@@ -5,7 +5,10 @@ const path = require('path');
 
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./home.html"))
+  res.write("<h1>")
+  res.write("All good")
+  res.write("</h1>")
+  res.end()
 })
 
 app.get("/aboutus", (req, res) => {

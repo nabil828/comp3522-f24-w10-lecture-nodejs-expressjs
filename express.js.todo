@@ -19,9 +19,9 @@
   - Express Response
     - res.write
     - res.end
-    - res.sendFile
+    - res.sendFile @done
     - res.send @done
-    - res.json
+    - res.json @done
     - res.render
     - res.redirect
     - res.status
