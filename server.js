@@ -25,8 +25,12 @@ app.post("/signup", (req, res) => {
   res.send(`Hi ${req.body.username}!`)
 })
 
+app.delete("/delete", (req, res) => {
+  console.log(req.query);
+  res.send(`Profile number ${req.query.profile} got deleted!`)
+})
+
 // app.put()
-// app.delete()
 
 app.listen(3000, () => {
   console.log("Successfully listening to port 3000");
