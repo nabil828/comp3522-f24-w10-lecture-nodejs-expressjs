@@ -5,10 +5,10 @@ const path = require('path');
 
 
 app.get("/", (req, res) => {
-  res.write("<h1>")
-  res.write("All good")
-  res.write("</h1>")
-  res.end()
+  res.json({
+    "msg": " all good ✅",
+    "status": "success"
+  })
 })
 
 app.get("/aboutus", (req, res) => {
